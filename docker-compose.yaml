@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  app:
+    image: gcc
+    container_name: scrocrix-codeforces
+    command: bash -c "while true; do sleep 1000; done"
+    volumes:
+      - ./:/etc/local/codeforces
