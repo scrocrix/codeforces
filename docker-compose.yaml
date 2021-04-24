@@ -1,6 +1,13 @@
 version: "3.7"
 services:
-  app:
+  python:
+    image: python
+    container_name: scrocrix-codeforces-python
+    command: bash -c "while true; do sleep 1000; done"
+    working_dir: /etc/local/codeforces
+    volumes:
+      - ./:/etc/local/codeforces
+  gcc:
     image: gcc
     container_name: scrocrix-codeforces
     command: bash -c "while true; do sleep 1000; done"
